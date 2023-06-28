@@ -16,11 +16,21 @@ namespace pryComettoIEFI
         {
             InitializeComponent();
         }
-        
-        clsPrincipal clsPrincipal = new clsPrincipal();
+
+        public void LimpiarControles()
+        {
+            txtNombreSocio.Text = "";
+            txtApellido.Text = "";
+            cmbPais.SelectedIndex = -1;
+            numEdad.Value = 50;
+            optMasculino.Checked = true;
+            numIngreso.Value = 1000;
+            numPuntaje.Value = 129.5m;
+        }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            clsPrincipal clsPrincipal = new clsPrincipal();
             clsPrincipal.CargarPaises(cmbPais);
         }
 
@@ -32,7 +42,8 @@ namespace pryComettoIEFI
                 return;
             }
 
-            clsPrincipal.RegistrarPais(txtNombrePais.Text);
+            clsPrincipal clsPrincipal = new clsPrincipal();
+            clsPrincipal.RegistrarPais(txtNombrePais);
             clsPrincipal.CargarPaises(cmbPais);
         }
 
@@ -44,20 +55,25 @@ namespace pryComettoIEFI
                 return;
             }
 
+            clsPrincipal clsPrincipal = new clsPrincipal();
             clsPrincipal.Nombre = txtNombreSocio.Text;
             clsPrincipal.Apellido = txtApellido.Text;
             clsPrincipal.Pais = cmbPais.Text;
             clsPrincipal.Edad = Convert.ToInt32(numEdad.Value);
             if (optMasculino.Checked)
             {
-                clsPrincipal.Sexo = -1;
+                clsPrincipal.Sexo = true;
             }
             else
             {
-                clsPrincipal.Sexo = 0;
+                clsPrincipal.Sexo = false;
             }
             clsPrincipal.Ingreso = numIngreso.Value;
             clsPrincipal.Puntaje = Convert.ToInt32(numPuntaje.Value);
+
+            clsPrincipal.RegistrarSocio();
+
+            LimpiarControles();
         }
     }
 }
