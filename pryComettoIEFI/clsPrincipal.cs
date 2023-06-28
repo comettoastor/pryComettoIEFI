@@ -14,7 +14,7 @@ namespace pryComettoIEFI
         public string Apellido { get; set; }
         public string Pais { get; set; }
         public int Edad { get; set; }
-        public bool Sexo { get; set; }
+        public int Sexo { get; set; }
         public decimal Ingreso { get; set; }
         public int Puntaje { get; set; }
 
@@ -96,14 +96,23 @@ namespace pryComettoIEFI
 
             if (Lector.HasRows)
             {
-                MessageBox.Show("El usuario ingresado ya existe! ¿Desea registrarlo igualmente?", "Ya existe", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                
-                return;
+                DialogResult dialogResult = MessageBox.Show("El usuario ingresado ya existe! ¿Desea registrarlo igualmente?", "Ya existe", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dialogResult == DialogResult.No)
+                {
+                    return;
+                }                
             }
 
             Lector.Close();
 
-            Comando.CommandText = "INSERT INTO PAISES (PAIS) VALUES (?)";
+            Comando.CommandText = "INSERT INTO SOCIOS (NOMBRE,APELLIDO,PAIS,EDAD,SEXO,INGRESO,PUNTAJE) VALUES (?,?,?,?,?,?,?)";
+            Comando.Parameters.AddWithValue("@Nombre", Nombre);
+            Comando.Parameters.AddWithValue("@Apellido", Apellido);
+            Comando.Parameters.AddWithValue("@Pais", Pais);
+            Comando.Parameters.AddWithValue("@Edad", Edad);
+            Comando.Parameters.AddWithValue("@Sexo", Sexo);
+            Comando.Parameters.AddWithValue("@Ingreso", Ingreso);
+            Comando.Parameters.AddWithValue("@Puntaje", Puntaje);
 
             Comando.ExecuteNonQuery();
 

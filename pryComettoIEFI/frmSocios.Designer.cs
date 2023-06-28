@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtIngreso = new System.Windows.Forms.TextBox();
             this.txtNombreSocio = new System.Windows.Forms.TextBox();
             this.optMasculino = new System.Windows.Forms.RadioButton();
             this.btnRegistrarSocio = new System.Windows.Forms.Button();
@@ -42,27 +41,23 @@
             this.optFemenino = new System.Windows.Forms.RadioButton();
             this.lblIngreso = new System.Windows.Forms.Label();
             this.lblPuntaje = new System.Windows.Forms.Label();
-            this.txtPuntaje = new System.Windows.Forms.TextBox();
             this.mrcSexo = new System.Windows.Forms.GroupBox();
             this.tabRegistro = new System.Windows.Forms.TabControl();
             this.Socios = new System.Windows.Forms.TabPage();
             this.Paises = new System.Windows.Forms.TabPage();
+            this.btnRegistrarPais = new System.Windows.Forms.Button();
             this.lblNombrePais = new System.Windows.Forms.Label();
             this.txtNombrePais = new System.Windows.Forms.TextBox();
-            this.btnRegistrarPais = new System.Windows.Forms.Button();
+            this.numPuntaje = new System.Windows.Forms.NumericUpDown();
+            this.numIngreso = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numEdad)).BeginInit();
             this.mrcSexo.SuspendLayout();
             this.tabRegistro.SuspendLayout();
             this.Socios.SuspendLayout();
             this.Paises.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPuntaje)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numIngreso)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtIngreso
-            // 
-            this.txtIngreso.Location = new System.Drawing.Point(66, 182);
-            this.txtIngreso.Name = "txtIngreso";
-            this.txtIngreso.Size = new System.Drawing.Size(100, 20);
-            this.txtIngreso.TabIndex = 1;
             // 
             // txtNombreSocio
             // 
@@ -194,13 +189,6 @@
             this.lblPuntaje.TabIndex = 15;
             this.lblPuntaje.Text = "Puntaje";
             // 
-            // txtPuntaje
-            // 
-            this.txtPuntaje.Location = new System.Drawing.Point(66, 208);
-            this.txtPuntaje.Name = "txtPuntaje";
-            this.txtPuntaje.Size = new System.Drawing.Size(100, 20);
-            this.txtPuntaje.TabIndex = 14;
-            // 
             // mrcSexo
             // 
             this.mrcSexo.Controls.Add(this.optMasculino);
@@ -224,13 +212,13 @@
             // 
             // Socios
             // 
+            this.Socios.Controls.Add(this.numIngreso);
+            this.Socios.Controls.Add(this.numPuntaje);
             this.Socios.Controls.Add(this.lblNombreSocio);
             this.Socios.Controls.Add(this.btnRegistrarSocio);
             this.Socios.Controls.Add(this.mrcSexo);
-            this.Socios.Controls.Add(this.txtIngreso);
             this.Socios.Controls.Add(this.lblPuntaje);
             this.Socios.Controls.Add(this.txtNombreSocio);
-            this.Socios.Controls.Add(this.txtPuntaje);
             this.Socios.Controls.Add(this.cmbPais);
             this.Socios.Controls.Add(this.lblIngreso);
             this.Socios.Controls.Add(this.numEdad);
@@ -259,6 +247,16 @@
             this.Paises.Text = "Países";
             this.Paises.UseVisualStyleBackColor = true;
             // 
+            // btnRegistrarPais
+            // 
+            this.btnRegistrarPais.Location = new System.Drawing.Point(272, 228);
+            this.btnRegistrarPais.Name = "btnRegistrarPais";
+            this.btnRegistrarPais.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistrarPais.TabIndex = 10;
+            this.btnRegistrarPais.Text = "Registrar";
+            this.btnRegistrarPais.UseVisualStyleBackColor = true;
+            this.btnRegistrarPais.Click += new System.EventHandler(this.btnRegistrarPais_Click);
+            // 
             // lblNombrePais
             // 
             this.lblNombrePais.AutoSize = true;
@@ -275,15 +273,24 @@
             this.txtNombrePais.Size = new System.Drawing.Size(100, 20);
             this.txtNombrePais.TabIndex = 8;
             // 
-            // btnRegistrarPais
+            // numPuntaje
             // 
-            this.btnRegistrarPais.Location = new System.Drawing.Point(272, 228);
-            this.btnRegistrarPais.Name = "btnRegistrarPais";
-            this.btnRegistrarPais.Size = new System.Drawing.Size(75, 23);
-            this.btnRegistrarPais.TabIndex = 10;
-            this.btnRegistrarPais.Text = "Registrar";
-            this.btnRegistrarPais.UseVisualStyleBackColor = true;
-            this.btnRegistrarPais.Click += new System.EventHandler(this.btnRegistrarPais_Click);
+            this.numPuntaje.Location = new System.Drawing.Point(66, 208);
+            this.numPuntaje.Name = "numPuntaje";
+            this.numPuntaje.Size = new System.Drawing.Size(47, 20);
+            this.numPuntaje.TabIndex = 18;
+            // 
+            // numIngreso
+            // 
+            this.numIngreso.Increment = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numIngreso.Location = new System.Drawing.Point(66, 181);
+            this.numIngreso.Name = "numIngreso";
+            this.numIngreso.Size = new System.Drawing.Size(100, 20);
+            this.numIngreso.TabIndex = 19;
             // 
             // frmPrincipal
             // 
@@ -302,13 +309,13 @@
             this.Socios.PerformLayout();
             this.Paises.ResumeLayout(false);
             this.Paises.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPuntaje)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numIngreso)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtIngreso;
         private System.Windows.Forms.TextBox txtNombreSocio;
         private System.Windows.Forms.RadioButton optMasculino;
         private System.Windows.Forms.Button btnRegistrarSocio;
@@ -322,7 +329,6 @@
         private System.Windows.Forms.RadioButton optFemenino;
         private System.Windows.Forms.Label lblIngreso;
         private System.Windows.Forms.Label lblPuntaje;
-        private System.Windows.Forms.TextBox txtPuntaje;
         private System.Windows.Forms.GroupBox mrcSexo;
         private System.Windows.Forms.TabControl tabRegistro;
         private System.Windows.Forms.TabPage Socios;
@@ -330,6 +336,8 @@
         private System.Windows.Forms.Button btnRegistrarPais;
         private System.Windows.Forms.Label lblNombrePais;
         private System.Windows.Forms.TextBox txtNombrePais;
+        private System.Windows.Forms.NumericUpDown numPuntaje;
+        private System.Windows.Forms.NumericUpDown numIngreso;
     }
 }
 
