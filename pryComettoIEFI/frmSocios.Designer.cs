@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.txtNombreSocio = new System.Windows.Forms.TextBox();
             this.optMasculino = new System.Windows.Forms.RadioButton();
             this.btnRegistrarSocio = new System.Windows.Forms.Button();
@@ -50,6 +51,8 @@
             this.btnRegistrarPais = new System.Windows.Forms.Button();
             this.lblNombrePais = new System.Windows.Forms.Label();
             this.txtNombrePais = new System.Windows.Forms.TextBox();
+            this.mrcPais = new System.Windows.Forms.GroupBox();
+            this.mrcSocio = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.numEdad)).BeginInit();
             this.mrcSexo.SuspendLayout();
             this.tabRegistro.SuspendLayout();
@@ -57,11 +60,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.numIngreso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPuntaje)).BeginInit();
             this.Paises.SuspendLayout();
+            this.mrcPais.SuspendLayout();
+            this.mrcSocio.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtNombreSocio
             // 
-            this.txtNombreSocio.Location = new System.Drawing.Point(66, 12);
+            this.txtNombreSocio.Location = new System.Drawing.Point(62, 22);
             this.txtNombreSocio.Name = "txtNombreSocio";
             this.txtNombreSocio.Size = new System.Drawing.Size(100, 20);
             this.txtNombreSocio.TabIndex = 0;
@@ -80,7 +85,7 @@
             // 
             // btnRegistrarSocio
             // 
-            this.btnRegistrarSocio.Location = new System.Drawing.Point(272, 228);
+            this.btnRegistrarSocio.Location = new System.Drawing.Point(229, 239);
             this.btnRegistrarSocio.Name = "btnRegistrarSocio";
             this.btnRegistrarSocio.Size = new System.Drawing.Size(75, 23);
             this.btnRegistrarSocio.TabIndex = 6;
@@ -91,14 +96,14 @@
             // cmbPais
             // 
             this.cmbPais.FormattingEnabled = true;
-            this.cmbPais.Location = new System.Drawing.Point(66, 64);
+            this.cmbPais.Location = new System.Drawing.Point(62, 74);
             this.cmbPais.Name = "cmbPais";
             this.cmbPais.Size = new System.Drawing.Size(100, 21);
             this.cmbPais.TabIndex = 2;
             // 
             // numEdad
             // 
-            this.numEdad.Location = new System.Drawing.Point(66, 91);
+            this.numEdad.Location = new System.Drawing.Point(62, 101);
             this.numEdad.Maximum = new decimal(new int[] {
             150,
             0,
@@ -121,7 +126,7 @@
             // lblNombreSocio
             // 
             this.lblNombreSocio.AutoSize = true;
-            this.lblNombreSocio.Location = new System.Drawing.Point(16, 15);
+            this.lblNombreSocio.Location = new System.Drawing.Point(12, 25);
             this.lblNombreSocio.Name = "lblNombreSocio";
             this.lblNombreSocio.Size = new System.Drawing.Size(44, 13);
             this.lblNombreSocio.TabIndex = 7;
@@ -130,7 +135,7 @@
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(16, 41);
+            this.lblApellido.Location = new System.Drawing.Point(12, 51);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(44, 13);
             this.lblApellido.TabIndex = 9;
@@ -138,7 +143,7 @@
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(66, 38);
+            this.txtApellido.Location = new System.Drawing.Point(62, 48);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 1;
@@ -146,7 +151,7 @@
             // lblPais
             // 
             this.lblPais.AutoSize = true;
-            this.lblPais.Location = new System.Drawing.Point(31, 67);
+            this.lblPais.Location = new System.Drawing.Point(27, 77);
             this.lblPais.Name = "lblPais";
             this.lblPais.Size = new System.Drawing.Size(29, 13);
             this.lblPais.TabIndex = 10;
@@ -155,7 +160,7 @@
             // lblEdad
             // 
             this.lblEdad.AutoSize = true;
-            this.lblEdad.Location = new System.Drawing.Point(28, 93);
+            this.lblEdad.Location = new System.Drawing.Point(24, 103);
             this.lblEdad.Name = "lblEdad";
             this.lblEdad.Size = new System.Drawing.Size(32, 13);
             this.lblEdad.TabIndex = 11;
@@ -174,7 +179,7 @@
             // lblIngreso
             // 
             this.lblIngreso.AutoSize = true;
-            this.lblIngreso.Location = new System.Drawing.Point(18, 185);
+            this.lblIngreso.Location = new System.Drawing.Point(14, 195);
             this.lblIngreso.Name = "lblIngreso";
             this.lblIngreso.Size = new System.Drawing.Size(42, 13);
             this.lblIngreso.TabIndex = 13;
@@ -183,7 +188,7 @@
             // lblPuntaje
             // 
             this.lblPuntaje.AutoSize = true;
-            this.lblPuntaje.Location = new System.Drawing.Point(17, 211);
+            this.lblPuntaje.Location = new System.Drawing.Point(13, 221);
             this.lblPuntaje.Name = "lblPuntaje";
             this.lblPuntaje.Size = new System.Drawing.Size(43, 13);
             this.lblPuntaje.TabIndex = 15;
@@ -193,7 +198,7 @@
             // 
             this.mrcSexo.Controls.Add(this.optMasculino);
             this.mrcSexo.Controls.Add(this.optFemenino);
-            this.mrcSexo.Location = new System.Drawing.Point(11, 127);
+            this.mrcSexo.Location = new System.Drawing.Point(7, 137);
             this.mrcSexo.Name = "mrcSexo";
             this.mrcSexo.Size = new System.Drawing.Size(162, 48);
             this.mrcSexo.TabIndex = 16;
@@ -207,29 +212,16 @@
             this.tabRegistro.Location = new System.Drawing.Point(12, 12);
             this.tabRegistro.Name = "tabRegistro";
             this.tabRegistro.SelectedIndex = 0;
-            this.tabRegistro.Size = new System.Drawing.Size(361, 283);
+            this.tabRegistro.Size = new System.Drawing.Size(330, 305);
             this.tabRegistro.TabIndex = 0;
             // 
             // Socios
             // 
-            this.Socios.Controls.Add(this.numIngreso);
-            this.Socios.Controls.Add(this.numPuntaje);
-            this.Socios.Controls.Add(this.lblNombreSocio);
-            this.Socios.Controls.Add(this.btnRegistrarSocio);
-            this.Socios.Controls.Add(this.mrcSexo);
-            this.Socios.Controls.Add(this.lblPuntaje);
-            this.Socios.Controls.Add(this.txtNombreSocio);
-            this.Socios.Controls.Add(this.cmbPais);
-            this.Socios.Controls.Add(this.lblIngreso);
-            this.Socios.Controls.Add(this.numEdad);
-            this.Socios.Controls.Add(this.lblEdad);
-            this.Socios.Controls.Add(this.txtApellido);
-            this.Socios.Controls.Add(this.lblPais);
-            this.Socios.Controls.Add(this.lblApellido);
+            this.Socios.Controls.Add(this.mrcSocio);
             this.Socios.Location = new System.Drawing.Point(4, 22);
             this.Socios.Name = "Socios";
             this.Socios.Padding = new System.Windows.Forms.Padding(3);
-            this.Socios.Size = new System.Drawing.Size(353, 257);
+            this.Socios.Size = new System.Drawing.Size(322, 279);
             this.Socios.TabIndex = 0;
             this.Socios.Text = "Socios";
             this.Socios.UseVisualStyleBackColor = true;
@@ -241,7 +233,7 @@
             0,
             0,
             0});
-            this.numIngreso.Location = new System.Drawing.Point(66, 181);
+            this.numIngreso.Location = new System.Drawing.Point(62, 191);
             this.numIngreso.Maximum = new decimal(new int[] {
             500000,
             0,
@@ -264,7 +256,7 @@
             // numPuntaje
             // 
             this.numPuntaje.DecimalPlaces = 1;
-            this.numPuntaje.Location = new System.Drawing.Point(66, 208);
+            this.numPuntaje.Location = new System.Drawing.Point(62, 218);
             this.numPuntaje.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -286,20 +278,19 @@
             // 
             // Paises
             // 
+            this.Paises.Controls.Add(this.mrcPais);
             this.Paises.Controls.Add(this.btnRegistrarPais);
-            this.Paises.Controls.Add(this.lblNombrePais);
-            this.Paises.Controls.Add(this.txtNombrePais);
             this.Paises.Location = new System.Drawing.Point(4, 22);
             this.Paises.Name = "Paises";
             this.Paises.Padding = new System.Windows.Forms.Padding(3);
-            this.Paises.Size = new System.Drawing.Size(353, 257);
+            this.Paises.Size = new System.Drawing.Size(322, 279);
             this.Paises.TabIndex = 1;
             this.Paises.Text = "Países";
             this.Paises.UseVisualStyleBackColor = true;
             // 
             // btnRegistrarPais
             // 
-            this.btnRegistrarPais.Location = new System.Drawing.Point(272, 228);
+            this.btnRegistrarPais.Location = new System.Drawing.Point(241, 250);
             this.btnRegistrarPais.Name = "btnRegistrarPais";
             this.btnRegistrarPais.Size = new System.Drawing.Size(75, 23);
             this.btnRegistrarPais.TabIndex = 1;
@@ -310,7 +301,7 @@
             // lblNombrePais
             // 
             this.lblNombrePais.AutoSize = true;
-            this.lblNombrePais.Location = new System.Drawing.Point(16, 15);
+            this.lblNombrePais.Location = new System.Drawing.Point(17, 26);
             this.lblNombrePais.Name = "lblNombrePais";
             this.lblNombrePais.Size = new System.Drawing.Size(44, 13);
             this.lblNombrePais.TabIndex = 9;
@@ -318,17 +309,52 @@
             // 
             // txtNombrePais
             // 
-            this.txtNombrePais.Location = new System.Drawing.Point(66, 12);
+            this.txtNombrePais.Location = new System.Drawing.Point(67, 23);
             this.txtNombrePais.Name = "txtNombrePais";
             this.txtNombrePais.Size = new System.Drawing.Size(100, 20);
             this.txtNombrePais.TabIndex = 0;
+            // 
+            // mrcPais
+            // 
+            this.mrcPais.Controls.Add(this.txtNombrePais);
+            this.mrcPais.Controls.Add(this.lblNombrePais);
+            this.mrcPais.Location = new System.Drawing.Point(6, 6);
+            this.mrcPais.Name = "mrcPais";
+            this.mrcPais.Size = new System.Drawing.Size(181, 60);
+            this.mrcPais.TabIndex = 10;
+            this.mrcPais.TabStop = false;
+            this.mrcPais.Text = "Registrar País";
+            // 
+            // mrcSocio
+            // 
+            this.mrcSocio.Controls.Add(this.lblNombreSocio);
+            this.mrcSocio.Controls.Add(this.btnRegistrarSocio);
+            this.mrcSocio.Controls.Add(this.numIngreso);
+            this.mrcSocio.Controls.Add(this.lblApellido);
+            this.mrcSocio.Controls.Add(this.numPuntaje);
+            this.mrcSocio.Controls.Add(this.lblPais);
+            this.mrcSocio.Controls.Add(this.txtApellido);
+            this.mrcSocio.Controls.Add(this.lblEdad);
+            this.mrcSocio.Controls.Add(this.mrcSexo);
+            this.mrcSocio.Controls.Add(this.numEdad);
+            this.mrcSocio.Controls.Add(this.lblPuntaje);
+            this.mrcSocio.Controls.Add(this.lblIngreso);
+            this.mrcSocio.Controls.Add(this.txtNombreSocio);
+            this.mrcSocio.Controls.Add(this.cmbPais);
+            this.mrcSocio.Location = new System.Drawing.Point(6, 6);
+            this.mrcSocio.Name = "mrcSocio";
+            this.mrcSocio.Size = new System.Drawing.Size(310, 268);
+            this.mrcSocio.TabIndex = 17;
+            this.mrcSocio.TabStop = false;
+            this.mrcSocio.Text = "Registrar Socio";
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 305);
+            this.ClientSize = new System.Drawing.Size(345, 319);
             this.Controls.Add(this.tabRegistro);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro - EL CLUB";
@@ -338,11 +364,13 @@
             this.mrcSexo.PerformLayout();
             this.tabRegistro.ResumeLayout(false);
             this.Socios.ResumeLayout(false);
-            this.Socios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numIngreso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPuntaje)).EndInit();
             this.Paises.ResumeLayout(false);
-            this.Paises.PerformLayout();
+            this.mrcPais.ResumeLayout(false);
+            this.mrcPais.PerformLayout();
+            this.mrcSocio.ResumeLayout(false);
+            this.mrcSocio.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -370,6 +398,8 @@
         private System.Windows.Forms.TextBox txtNombrePais;
         private System.Windows.Forms.NumericUpDown numPuntaje;
         private System.Windows.Forms.NumericUpDown numIngreso;
+        private System.Windows.Forms.GroupBox mrcPais;
+        private System.Windows.Forms.GroupBox mrcSocio;
     }
 }
 

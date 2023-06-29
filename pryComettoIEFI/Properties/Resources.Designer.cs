@@ -69,5 +69,15 @@ namespace pryComettoIEFI.Properties {
                 return ((byte[])(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon icono_club {
+            get {
+                object obj = ResourceManager.GetObject("icono_club", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
     }
 }
